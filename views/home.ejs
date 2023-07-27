@@ -1,0 +1,119 @@
+<!-- 
+    The code contained withinin this (home.ejs)
+    file was inspired and 
+    adpated from the following tutorial
+    https://www.youtube.com/watch?v=nUUsUAPEjFc
+-->
+
+<% layout('layouts/sidebar') %>
+
+<!-- Cards -->
+<div class="card-box">
+    <div class="card">
+        <div>
+            <div class="numbers">User</div>
+            <div class="card-name"><%= currentUser.username %></div>
+        </div>
+        <div class="icon-box">
+            <ion-icon name="person-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <div class="numbers">Position</div>
+            <div class="card-name"><%= currentUser.position %></div>
+        </div>
+        <div class="icon-box">
+            <ion-icon name="grid-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <div class="numbers">Salary</div>
+            <div class="card-name"><%= currentUser.salary %></div>
+        </div>
+        <div class="icon-box">
+            <ion-icon name="card-outline"></ion-icon>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <div class="numbers">Holidays</div>
+            <div class="card-name"><%= currentUser.holidays %></div>
+        </div>
+        <div class="icon-box">
+            <ion-icon name="airplane-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+
+<!-- Details/Data List (Home Dashboard) -->
+<div class="details">
+    <div class="detail-item-one">
+        <div class="card-header">
+            <h2>Holiday Requests</h2>
+            <a href="#" class="dashboard-btn">Request Holidays</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Holidays Remaining</td>
+                    <td>From</td>
+                    <td>To</td>
+                    <td>Status</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>39</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status one">Approved</span></td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status two">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status three">Cancelled</span></td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status two">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status two">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status one">Approved</span></td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status four">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>28/07/2022</td>
+                    <td>01/08/2022</td>
+                    <td><span class="status four">Completed</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

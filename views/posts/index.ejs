@@ -1,0 +1,28 @@
+<% layout('layouts/sidebar') %>
+
+<h1>Forum</h1>
+<div>
+    <a class="btn btn-success mb-3" href="/posts/new">Add Post</a>
+</div>
+
+<% for (let post of posts) { %>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <% if (post.images.length) { %>
+                    <img class="img-fluid" src="<%= post.images[0].url %>">
+                <% } else { %>
+                    <img class="img-fluid" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3870&q=80">
+                <% } %>    
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><%= post.title %></h5>
+                    <p class="card-text"><%= post.description %></p>
+                    <a class="btn btn-primary" href="/posts/<%= post._id %>">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<% } %>
+

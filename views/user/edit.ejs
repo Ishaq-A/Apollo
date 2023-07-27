@@ -1,0 +1,59 @@
+<% layout('layouts/sidebar') %>
+
+<div class="container justify-content-center align-items-center mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3955&q=80"
+                    class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Edit User</h5>
+                    <form action="/users/<%= user._id %>?_method=PUT" method="POST" class="validated-form" 
+                        novalidate enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label class="form-label" for="firstname">First Name</label>
+                            <input class="form-control" type="text" id="firstname" name="firstname" 
+                                value="<%= user.firstname %>" required autofocus>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="lastname">Last Name</label>
+                            <input class="form-control" type="text" id="lastname" name="lastname" 
+                                value="<%= user.lastname %>" required autofocus>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="text" id="email" name="email" 
+                                value="<%= user.email %>" required autofocus>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" 
+                                value="<%= user.username %>" required autofocus>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="image">Image</label>
+                            <input class="form-control" type="file" id="image" name="image">
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success">Update User</button>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <a class="btn btn-danger" href="/users">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

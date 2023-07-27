@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Apollo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/calendar">Calendar</a>
+                <a class="nav-link" href="/kanban">Schedule</a>
+                <% if (currentUser.isAdmin) { %>
+                    <a class="nav-link" href="/users">Employees</a>
+                <% } %>
+                <a class="nav-link" href="/posts">Posts</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <% if (!currentUser) { %>
+                <a class="nav-link" href="/auth/login">Log In</a>
+                <!-- <a class="nav-link" href="/register">Register</a> -->
+                <% } else { %>
+                <a class="nav-link" href="/auth/logout">Log Out</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>
+

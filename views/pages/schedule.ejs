@@ -1,0 +1,42 @@
+<!-- The code contained within this file (schedule.ejs) has been
+    created/adpated by following the guided tutorial from
+    https://www.youtube.com/watch?v=pz7bO9_lsGo
+
+    The Github profile of the tutorial provider is below
+    https://github.com/maximesalomon -->
+
+<% layout('layouts/boilerplate') %>
+
+<section id="board">
+    <div id="infos">
+        <div id="infos-content">
+            <div class="infos-title">Todo</div>
+            <div class="infos-company">Project</div>
+        </div>
+    </div>
+    <div id="add-task-form">
+        <input id="task-value" placeholder="Add task">
+        <button id="add-task">+</button>
+    </div>
+</section>
+<section id="columns">
+    <div class="column dropzone">
+        <h3 class="column-title">Backlog</h3>
+        <ul class="tasks" id="tasks-added">
+            <!-- <li class="task fill" draggable="true">
+                <div class="task-content">Create repository template with HTML & CSS</div>
+                <div class="trash">X</div>
+            </li> -->
+        </ul>
+    </div>
+    <div class="column dropzone">
+        <h3 class="column-title">Todo</h3>
+    </div>
+    <div class="column dropzone">
+        <h3 class="column-title">Review</h3>
+    </div>
+    <div class="column dropzone">
+        <h3 class="column-title">Done</h3>
+    </div>
+</section>
+
